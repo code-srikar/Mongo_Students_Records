@@ -1,6 +1,6 @@
 
 function fetchAndRender() {
-    fetch('http://localhost:3000/api/students')
+    fetch('http://localhost:3500/api/students')
         .then(response => response.json()
             .then(data => {
                 console.log(data)
@@ -52,7 +52,7 @@ document.getElementById('addStd').addEventListener("click", (e) => {
     //         )
     //     )
 
-    fetch('http://localhost:3000/api/students', {
+    fetch('http://localhost:3500/api/students', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -73,7 +73,7 @@ function editData(id1) {
         _id, name, email, mobile
     }
     // console.log(data);
-    fetch("http://localhost:3000/api/students/" + id1, {
+    fetch("http://localhost:3500/api/students/" + id1, {
         method: 'PATCH',
         headers: {
             'Content-Type': 'application/json'
@@ -84,7 +84,7 @@ function editData(id1) {
 }
 
 function deleteData(id1) {
-    fetch("http://localhost:3000/api/students/" + id1, { method: 'DELETE' })
+    fetch("http://localhost:3500/api/students/" + id1, { method: 'DELETE' })
     // console.log(id1)
     window.location.reload()
 }
